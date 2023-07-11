@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.10.8 on win32)" generated="20230711 19:11:53.873" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\work\projects\ECGVue\test\RoboTests\RobotTests\tests">
+<suite id="s1-s1" name="Sign In" source="C:\work\projects\ECGVue\test\RoboTests\RobotTests\tests\sign_in">
+<suite id="s1-s1-s1" name="Valid Login" source="C:\work\projects\ECGVue\test\RoboTests\RobotTests\tests\sign_in\valid_login.robot">
+<test id="s1-s1-s1-t1" name="Normal Error" line="18">
+<kw name="Fail" library="BuiltIn">
+<arg>This is a rather boring example...</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230711 19:11:53.902" level="FAIL">This is a rather boring example...</msg>
+<status status="FAIL" starttime="20230711 19:11:53.902" endtime="20230711 19:11:53.902"/>
+</kw>
+<status status="FAIL" starttime="20230711 19:11:53.902" endtime="20230711 19:11:53.902">This is a rather boring example...</status>
+</test>
+<test id="s1-s1-s1-t2" name="HTML Error" line="21">
+<kw name="Get Number">
+<var>${number}</var>
+<msg timestamp="20230711 19:11:53.902" level="FAIL">No keyword with name 'Get Number' found.</msg>
+<status status="FAIL" starttime="20230711 19:11:53.902" endtime="20230711 19:11:53.902"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${number}</arg>
+<arg>42</arg>
+<arg>*HTML* Number is not my &lt;b&gt;MAGIC&lt;/b&gt; number.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20230711 19:11:53.902" endtime="20230711 19:11:53.902"/>
+</kw>
+<status status="FAIL" starttime="20230711 19:11:53.902" endtime="20230711 19:11:53.902">No keyword with name 'Get Number' found.</status>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="FAIL" starttime="20230711 19:11:53.902" endtime="20230711 19:11:53.918"/>
+</suite>
+<status status="FAIL" starttime="20230711 19:11:53.902" endtime="20230711 19:11:53.918"/>
+</suite>
+<status status="FAIL" starttime="20230711 19:11:53.873" endtime="20230711 19:11:53.918"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1" name="Sign In">Tests.Sign In</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1-s1" name="Valid Login">Tests.Sign In.Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230711 19:11:53.902" level="ERROR">Error in file 'C:\work\projects\ECGVue\test\RoboTests\RobotTests\resources\common.robot' on line 6: Resource file 'resource.robot' does not exist.</msg>
+</errors>
+</robot>
