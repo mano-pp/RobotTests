@@ -18,28 +18,26 @@ ${VALID PASSWORD}    mode
 ${LOGIN TITLE}    Sign in to ecgvue
 ${LOGIN URL}      http://${SERVER}/
 ${LOGOUT URL}     https://www.probeplus.site/realms/ecgvue/protocol/openid-connect/logout
+${LOGOUT TEXT}    Logging out
 
 *** Keyword ***
-Open Browser To Login Page
-    Open Browser    ${SERVER}    ${BROWSER}
+Open Browser To Logout Page
+    Open Browser    ${LOGOUT URL}    ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
-    Login Page Should Be Open
+    Logout Page Should Be Open
 
-Login Page Should Be Open
+Logout Page Should Be Open
     Wait Until Location Contains    ${KC SERVER}
-    Title Should Be                 ${LOGIN TITLE}
+    Page Should Contain             ${LOGOUT TEXT} 
 
 Summary Page Should Be Open
     Wait Until Location Contains    ${SERVER}
-    #Title Should Be                 ${LOGIN TITLE}
+    #Title Should Be                ${LOGIN TITLE}
 
 *** Test Cases ***
-
-Valid login
-    Open Browser To Login Page
-    Input Text      //input[@name="username"]    rihaz@probeplus.in
-    Input Text      //input[@name="password"]    deepak123
-    Click Element   //input[@name="login"]
+Do Logout
+    Open Browser To Logout Page
+    Click Element   //input[@name="confirmLogout"]
 
 
